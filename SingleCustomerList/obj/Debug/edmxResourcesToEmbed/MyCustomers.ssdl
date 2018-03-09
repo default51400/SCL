@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище SCLdbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "SCLdb.dbo.SCLdbTable1" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="SCLdbTable1">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Surname" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="WorkingPosition" />
+      <PropertyRef Name="OrganizationId" />
+      <PropertyRef Name="OrganizationName" />
+      <PropertyRef Name="Region" />
+      <PropertyRef Name="OtherDetail" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="WorkingPosition" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OrganizationId" Type="int" Nullable="false" />
+    <Property Name="OrganizationName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Region" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OtherDetail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище SCLdbModelContainer">
+    <EntitySet Name="SCLdbTable1" EntityType="Self.SCLdbTable1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SCLdbTable1].[Id] AS [Id], 
+    [SCLdbTable1].[Surname] AS [Surname], 
+    [SCLdbTable1].[FirstName] AS [FirstName], 
+    [SCLdbTable1].[LastName] AS [LastName], 
+    [SCLdbTable1].[UserId] AS [UserId], 
+    [SCLdbTable1].[WorkingPosition] AS [WorkingPosition], 
+    [SCLdbTable1].[OrganizationId] AS [OrganizationId], 
+    [SCLdbTable1].[OrganizationName] AS [OrganizationName], 
+    [SCLdbTable1].[Region] AS [Region], 
+    [SCLdbTable1].[OtherDetail] AS [OtherDetail]
+    FROM [dbo].[SCLdbTable1] AS [SCLdbTable1]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

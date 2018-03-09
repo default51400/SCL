@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E674D351-3A2F-441A-9ED2-51684B95D99F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SingleCustomerList</RootNamespace>
+    <AssemblyName>SingleCustomerList</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="City.cs" />
+    <Compile Include="FormChangeOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeOrganization.Designer.cs">
+      <DependentUpon>FormChangeOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangeCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeCustomer.Designer.cs">
+      <DependentUpon>FormChangeCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddData.Designer.cs">
+      <DependentUpon>FormAddData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddOrganization.Designer.cs">
+      <DependentUpon>FormAddOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFindOrgRC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFindOrgRC.Designer.cs">
+      <DependentUpon>FormFindOrgRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSCL.Designer.cs">
+      <DependentUpon>FormSCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="Migrations\201706292018396_InitialCreate.cs" />
+    <Compile Include="Migrations\201706292018396_InitialCreate.Designer.cs">
+      <DependentUpon>201706292018396_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706292119411_AddLoginTable.cs" />
+    <Compile Include="Migrations\201706292119411_AddLoginTable.Designer.cs">
+      <DependentUpon>201706292119411_AddLoginTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706292158491_MakeReferenceFromCustomerToLoginTable.cs" />
+    <Compile Include="Migrations\201706292158491_MakeReferenceFromCustomerToLoginTable.Designer.cs">
+      <DependentUpon>201706292158491_MakeReferenceFromCustomerToLoginTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706301918213_AddRegionTable.cs" />
+    <Compile Include="Migrations\201706301918213_AddRegionTable.Designer.cs">
+      <DependentUpon>201706301918213_AddRegionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706302033203_RenameRegionToCategoryAndRefactoring.cs" />
+    <Compile Include="Migrations\201706302033203_RenameRegionToCategoryAndRefactoring.Designer.cs">
+      <DependentUpon>201706302033203_RenameRegionToCategoryAndRefactoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706302042265_AddCityAndRegionTables.cs" />
+    <Compile Include="Migrations\201706302042265_AddCityAndRegionTables.Designer.cs">
+      <DependentUpon>201706302042265_AddCityAndRegionTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706302118218_AddReferenceToRegionFromCity.cs" />
+    <Compile Include="Migrations\201706302118218_AddReferenceToRegionFromCity.Designer.cs">
+      <DependentUpon>201706302118218_AddReferenceToRegionFromCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706302145479_AddFormattedLoginColumnAndMakeReferenceToItFromCustomer.cs" />
+    <Compile Include="Migrations\201706302145479_AddFormattedLoginColumnAndMakeReferenceToItFromCustomer.Designer.cs">
+      <DependentUpon>201706302145479_AddFormattedLoginColumnAndMakeReferenceToItFromCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707210956358_DeleteTablesFromWorkSqlServer.cs" />
+    <Compile Include="Migrations\201707210956358_DeleteTablesFromWorkSqlServer.Designer.cs">
+      <DependentUpon>201707210956358_DeleteTablesFromWorkSqlServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709041956582_ChangeReferenceToCityCategoryRegionFromLogin.cs" />
+    <Compile Include="Migrations\201709041956582_ChangeReferenceToCityCategoryRegionFromLogin.Designer.cs">
+      <DependentUpon>201709041956582_ChangeReferenceToCityCategoryRegionFromLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709042048454_AddIsActiveAndCustomerReferenceFromLogin.cs" />
+    <Compile Include="Migrations\201709042048454_AddIsActiveAndCustomerReferenceFromLogin.Designer.cs">
+      <DependentUpon>201709042048454_AddIsActiveAndCustomerReferenceFromLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709270805260_AddCitiesRegionDonetskAndMakeSomeChangesToAlreadyUsedCitiesAndDeleteTableCities.cs" />
+    <Compile Include="Migrations\201709270805260_AddCitiesRegionDonetskAndMakeSomeChangesToAlreadyUsedCitiesAndDeleteTableCities.Designer.cs">
+      <DependentUpon>201709270805260_AddCitiesRegionDonetskAndMakeSomeChangesToAlreadyUsedCitiesAndDeleteTableCities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280741361_ChangeCustomerOrgRCtoOrgNameFoProgramAndTableData.cs" />
+    <Compile Include="Migrations\201709280741361_ChangeCustomerOrgRCtoOrgNameFoProgramAndTableData.Designer.cs">
+      <DependentUpon>201709280741361_ChangeCustomerOrgRCtoOrgNameFoProgramAndTableData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="SclContext.cs" />
+    <Compile Include="Organization.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="SclContextInitializer.cs" />
+    <EmbeddedResource Include="FormChangeOrganization.resx">
+      <DependentUpon>FormChangeOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeCustomer.resx">
+      <DependentUpon>FormChangeCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddData.resx">
+      <DependentUpon>FormAddData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddOrganization.resx">
+      <DependentUpon>FormAddOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFindOrgRC.resx">
+      <DependentUpon>FormFindOrgRC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSCL.ja.resx">
+      <DependentUpon>FormSCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSCL.resx">
+      <DependentUpon>FormSCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706292018396_InitialCreate.resx">
+      <DependentUpon>201706292018396_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706292119411_AddLoginTable.resx">
+      <DependentUpon>201706292119411_AddLoginTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706292158491_MakeReferenceFromCustomerToLoginTable.resx">
+      <DependentUpon>201706292158491_MakeReferenceFromCustomerToLoginTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706301918213_AddRegionTable.resx">
+      <DependentUpon>201706301918213_AddRegionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706302033203_RenameRegionToCategoryAndRefactoring.resx">
+      <DependentUpon>201706302033203_RenameRegionToCategoryAndRefactoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706302042265_AddCityAndRegionTables.resx">
+      <DependentUpon>201706302042265_AddCityAndRegionTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706302118218_AddReferenceToRegionFromCity.resx">
+      <DependentUpon>201706302118218_AddReferenceToRegionFromCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706302145479_AddFormattedLoginColumnAndMakeReferenceToItFromCustomer.resx">
+      <DependentUpon>201706302145479_AddFormattedLoginColumnAndMakeReferenceToItFromCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707210956358_DeleteTablesFromWorkSqlServer.resx">
+      <DependentUpon>201707210956358_DeleteTablesFromWorkSqlServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709041956582_ChangeReferenceToCityCategoryRegionFromLogin.resx">
+      <DependentUpon>201709041956582_ChangeReferenceToCityCategoryRegionFromLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709042048454_AddIsActiveAndCustomerReferenceFromLogin.resx">
+      <DependentUpon>201709042048454_AddIsActiveAndCustomerReferenceFromLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709270805260_AddCitiesRegionDonetskAndMakeSomeChangesToAlreadyUsedCitiesAndDeleteTableCities.resx">
+      <DependentUpon>201709270805260_AddCitiesRegionDonetskAndMakeSomeChangesToAlreadyUsedCitiesAndDeleteTableCities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280741361_ChangeCustomerOrgRCtoOrgNameFoProgramAndTableData.resx">
+      <DependentUpon>201709280741361_ChangeCustomerOrgRCtoOrgNameFoProgramAndTableData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

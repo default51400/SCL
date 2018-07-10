@@ -72,11 +72,11 @@ namespace SingleCustomerList
 
             Login login1 = new Login();
             Customer cust1 = new Customer();
-            cust1.SurName = "Штельмак";
-            cust1.FirstName = "Наталія";
-            cust1.LastName = "Афанасіївна";
+            cust1.SurName = "Купрус";
+            cust1.FirstName = "Світлана";
+            cust1.LastName = "Олексіївна";
             cust1.UserStatus = "Діє";
-            cust1.UserIdINN = "2218719147";
+            cust1.UserIdINN = "56987423654";
             cust1.WorkingPosition = "державний нотаріус";
             cust1.Phone = "(   )    -    ;               (   )    -    ;";
             cust1.Detail = "AOPC 2131231";
@@ -101,7 +101,7 @@ namespace SingleCustomerList
             cust2.FirstName = "Iрина";
             cust2.LastName = "Леонiдiвна";
             cust2.UserStatus = "Діє";
-            cust2.UserIdINN = "2323245622";
+            cust2.UserIdINN = "5874269823";
             cust2.WorkingPosition = "провiдний спеціалiст";
             cust2.Phone = "(123)1233-1231;               (   )    -    ;";
             cust2.Detail = "AOPC 123511";
